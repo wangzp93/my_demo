@@ -8,7 +8,7 @@ cav.onclick = function(e){
         y = e.offsetY,
         r = 0,
         maxr = getMaxR(x, y, cav.width, cav.height);
-        console.log(x, y)
+        console.log(x, y);
     var primaryLen = arcArr.length;
     arcArr.push({
         x: x,
