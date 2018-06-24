@@ -1,0 +1,23 @@
+{
+  "name": "webpack-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  	"_comment": "指定入口文件 和输出文件",
+    "start": "webpack-dev-server --entry ./src/js/main.js --output-filename ./dist/build.js",
+  	"_comment": "--watch可以监测文件，有修改自动build",
+    "build": "webpack --watch"
+  },
+  "author": "wzp",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
