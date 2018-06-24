@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+/*top*/
+.top{
+	padding: 1rem;
+	background: rgb(27, 26, 31);
+	color: rgb(255, 255, 255);
+	position: relative;
+}
+.top .top-back,
+.top .top-close,
+.top .top-more{
+	position: absolute;
+}
+.top .top-close{
+	left: 4.5rem;
+}
+.top .top-more{
+	right: 1rem;
+}
+.top .top-title{
+	width: 10rem;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+}

@@ -1,0 +1,113 @@
+.head-title{
+	font-weight: bold;
+	padding: 1rem;
+	background: rgb(249, 244, 244);
+}
+.head-title::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.head-title .head-title-call{
+	float: left;
+}
+.head-title .head-title-call .head-title-dear{
+	color: rgb(115, 138, 156);
+}
+.head-title .head-title-call .head-title-name{
+	color: rgb(158, 132, 102);
+}
+.head-title .head-title-welcome{
+	float: right;
+	font-size: 18px;
+	background: linear-gradient(rgb(119, 146, 173), rgb(77, 97, 119));
+	-webkit-background-clip: text;
+	color: transparent;
+}
+.active-time{
+	padding: 1rem;
+	text-align: center;
+}
+/*框架*/
+.frame{
+	margin: 2rem 0.8rem 0 0.8rem;
+}
+.frame-first{
+	margin-top: 0;
+}
+.frame .frame-title{
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 0.8rem 0;
+}
+.frame .frame-panel{
+	border-width: 1px;
+	border-style: dashed;
+	border-top: none;
+	border-radius: 0 0 2rem 2rem;
+}
+.frame .frame-panel .frame-detail{
+s	padding-right: 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.frame .frame-panel .frame-detail .frame-detail-first{
+	border-top: none;
+}
+/*推荐*/
+.frame .recommend-title{
+	background: rgb(75, 88, 111);
+}
+.frame .recommend-panel{
+	color: rgb(75, 88, 111);
+	border-color: rgb(75, 88, 111);
+}
+.frame .recommend-panel .recommend-detail{
+	border-top-color: rgb(203, 211, 221);
+	padding: 1.5rem;
+}
+.frame .frame-panel .frame-detail .recommend-detail-start{
+	width: 42%;
+	float: left;
+}
+.frame .frame-panel .frame-detail .recommend-detail-end{
+	width: 49%;
+	float: right;
+}
+/*疑问*/
+.frame .question-title{
+	background: rgb(151, 126, 104);
+}
+.frame .question-panel{
+	color: rgb(151, 126, 104);
+	border-color: rgb(151, 126, 104);
+}
+.frame .question-panel .question-detail{
+	border-top-color: rgb(235, 225, 215);
+	padding: 1rem;
+}
+.frame .frame-panel .frame-detail .question-num{
+	float: left;
+	width: 2rem;
+	height: 100%;
+	font-size: 20px;
+	color: rgb(151, 126, 104);
+}
+.frame .frame-panel .frame-detail .question-panel{
+	margin-left: 2rem;
+	line-height: 1.5;
+}
+.frame .frame-panel .frame-detail .question-panel .question-content{
+	color: rgb(94, 113, 139);
+	font-weight: bold;
+}
+.frame .frame-panel .frame-detail .question-panel .question-answer{
+	color: rgb(118, 118, 118);
+	margin-top: 0.5rem;
+}
+.frame .frame-panel .frame-detail .question-panel .question-answer .question-da{
+	float: left;
+}
+.frame .frame-panel .frame-detail .question-panel .question-answer .question-huida{
+	margin-left: 2rem;
+}

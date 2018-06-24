@@ -1,0 +1,126 @@
+/*main*/
+.main{
+	background:rgb(53, 53, 53) ;
+	padding: 2rem;
+}
+.main .main-title{
+	color: rgb(255, 255, 255);
+}
+.main .main-money{
+	text-align: center;
+	margin-top: 1.5rem;
+}
+.main .main-money .money-amount{
+	color: rgb(252, 208, 55);
+	font-size: 28px;
+}
+.main .main-money .money-unit{
+	color: rgb(255, 255, 255);
+}
+.main .main-tip{
+	text-align: center;
+	margin-top: 1.5rem;
+}
+.main .main-tip .tip-msg{
+	color: rgb(143, 143, 143);
+}
+.main .main-tip .tip-money{
+	color: rgb(255, 255, 255);
+}
+.main .main-tip .tip-icon{
+	color: rgb(68, 160, 162);
+}
+.main .main-btn{
+	text-align: center;
+	margin-top: 1.5rem;
+}
+.main .main-btn button{
+	text-align: center;
+	background: linear-gradient(rgb(125, 215, 204), rgb(85, 168, 182));
+	color: rgb(255, 255, 255);
+	width: 9rem;
+	height: 2.5rem;
+	font-size: 14px;
+	border-radius: 1.3rem;
+	border: none;
+}
+/*detail*/
+.detail{
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 1.7rem;
+}
+.detail .detail-item{
+	text-align: center;
+}
+.detail .detail-item .detail-item-title{
+	color: rgb(156, 156, 156);
+}
+.detail .detail-item .detail-item-amount{
+	margin-top: 1.2rem;
+}
+.detail .detail-item .detail-item-btn{
+	color: rgb(138, 218, 219);
+	border: 1px solid rgb(138, 218, 219);
+	background: rgb(255, 255, 255);
+	width: 5rem;
+	height: 1.8rem;
+	border-radius: 0.6rem;
+	margin-top: 1.2rem;
+	
+}
+.detail .detail-split{
+	border-left: 1px solid rgb(241, 241, 241);
+}
+/*month detail*/
+.month-detail{
+	border-top: 1px solid rgb(210, 210, 210);
+}
+.month-detail .month-detail-top{
+	background: rgb(248, 248, 248);
+	height: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+}
+.month-detail .month-detail-title{
+	color: rgb(127, 127, 127);
+}
+.month-detail .month-detail-remark{
+	font-size: 12px;
+	flex-grow: 1;
+}
+.month-detail .month-detail-remark .month-detail-remark-title{
+	color: rgb(155, 155, 155);
+}
+.month-detail .month-detail-amount{
+	font-size: 18px;
+	color: rgb(233, 117, 138);
+}
+.month-detail .month-detail-item{
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+	border-top: 1px dashed rgb(242, 242, 242);
+}
+.month-detail .month-detail-item-first{
+	border-top: none;
+}
+.month-detail .month-detail-item .month-detail-time{
+	color: rgb(150, 150, 150);
+}
+.month-detail .month-detail-item .month-detail-name,
+.month-detail .month-detail-item .month-detail-type{
+	
+}
+.month-detail .month-detail-item .month-detail-money .month-detail-add{
+	font-size: 18px;
+	text-align: center;
+}
+.month-detail .month-detail-item .month-detail-money .month-detail-tax{
+	font-size: 12px;
+	color: rgb(155, 155, 155);
+}
