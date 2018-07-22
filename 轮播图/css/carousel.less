@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+@img_w: 1023px;
+@img_h: 400px;
+@nav_w: 12px;
+@nav_h: 12px;
+/*图片渐显*/
+@keyframes show{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*图片渐隐*/
+@keyframes hide{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+/*外部div*/
+#carousel{
+	position: relative;
+	margin: 0 auto;
+	width: @img_w;
+	text-align: center;
+
+	.carousel-main{/*图片区*/
+		height: @img_h;
+		li{
+			@animation_time: 700ms;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			&.active{
+				animation: show @animation_time forwards;
+				z-index: 10;
+				display: block;
+			}
+			&.unactive{
+				animation: hide @animation_time forwards;
+			}
+			img{
+				display: block;
+			}
+		}
+	}
+	@nav_z: 100;
+	.carousel-nav{/*导航区*/
+		@nav_bg_color: #fff;
+		position: relative;
+		top: -50px;
+		display: inline-block;
+		z-index: @nav_z;
+		li{
+			width: @nav_w;
+			height: @nav_h;
+			border-radius: 50%;
+			border: 2px solid @nav_bg_color;
+			background: @nav_bg_color;
+			opacity: 0.7;
+			cursor: pointer;
+			display: inline-block;
+			margin: 0 3px;
+			&.active{
+				background: #ff4040;
+			}
+		}
+	}
+	@direc_w: 28px;
+	@direc_h: 60px;
+	@direc_bg: url("../img/focus_lr0918.png");
+	@direc_x1: 0;
+	@direc_x2: -52px;
+	@direc_y1: 0;
+	@direc_y2: -61px;
+	.carousel-left{
+		width: @direc_w;
+		height: @direc_h;
+		position: absolute;
+		top: 50%;
+		margin-top: 0 - @direc_h / 2;
+		left: 20px;
+		cursor: pointer;
+		background: @direc_bg no-repeat @direc_x1 @direc_y1;
+		z-index: @nav_z;
+		&:hover{
+			background-position: @direc_x1 @direc_y2;
+		}
+	}
+	.carousel-right{
+		width: @direc_w;
+		height: @direc_h;
+		position: absolute;
+		top: 50%;
+		margin-top: 0 - @direc_h / 2;
+		right: 20px;
+		cursor: pointer;
+		background: @direc_bg no-repeat @direc_x2 @direc_y1;
+		z-index: @nav_z;
+		&:hover{
+			background-position: @direc_x2 @direc_y2;
+		}
+	}
+}
