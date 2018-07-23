@@ -25,7 +25,8 @@ function Carousel() {
 				navLi = navList[i],
 				className = mainLi.className;	//获取图片class
 			if (className == "active") {	//图片与导航同步，只判断一个即可
-				mainLi.className = "unactive";	//图片
+//				mainLi.className = "unactive";	//图片
+				mainLi.className = "";	//图片
 				navLi.className = "";	//导航
 			}
 		}

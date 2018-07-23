@@ -13,15 +13,6 @@
     opacity: 1;
   }
 }
-/*图片渐隐*/
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 /*外部div*/
 #carousel {
   position: relative;
@@ -41,11 +32,7 @@
 }
 #carousel .carousel-main li.active {
   animation: show 700ms forwards;
-  z-index: 10;
   display: block;
-}
-#carousel .carousel-main li.unactive {
-  animation: hide 700ms forwards;
 }
 #carousel .carousel-main li img {
   display: block;
