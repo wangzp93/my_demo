@@ -4,8 +4,9 @@ var main = document.getElementById("main");
 function make(content) {
     var span = document.createElement("span");
     span.innerText = content;
-    span.style.left = main.offsetWidth + span.offsetWidth + "px";
-    span.style.top = Math.random() * main.offsetHeight - parseInt(getComputedStyle(document.body).fontSize) + "px";
+    span.style.left = main.offsetWidth + "px";
+    //显示区高度先减去字体大小，再乘随机数，避免弹幕出现在屏幕外
+    span.style.top = Math.random() * (main.offsetHeight - parseInt(getComputedStyle(document.body).fontSize)) + "px";
     main.appendChild(span);
 }
 //移动每一个弹幕
@@ -14,6 +15,7 @@ function move(){
     for(var i=0, len=spanArr.length; i<len; i++){
         var span = spanArr[i];
         span.style.left = span.offsetLeft - 5 +"px";
+        //如果弹幕出了屏幕，将它移除，并且数组长度减1
         if(span.offsetLeft + span.offsetWidth < 0){
             span.remove();
             i--;
@@ -23,6 +25,7 @@ function move(){
 }
 //利用定时器，使弹幕连续移动
 setInterval(move, 40);
+//回车发送弹幕
 document.getElementById("content").onkeypress = function(e) {
     if (e.keyCode === 13) {
         make(this.value);
