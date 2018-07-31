@@ -5,8 +5,8 @@ function make(content) {
     var span = document.createElement("span");
     span.innerText = content;
     span.style.left = main.offsetWidth + "px";
-    //显示区高度先减去字体大小，再乘随机数，避免弹幕出现在屏幕外
-    span.style.top = Math.random() * (main.offsetHeight - parseInt(getComputedStyle(document.body).fontSize)) + "px";
+    //显示区高度先减去字体大小，再乘随机数，避免弹幕出现在屏幕外，6是预留出来的高度，比如字体16px，实际占用21px高度
+    span.style.top = Math.random() * (main.offsetHeight - parseInt(getComputedStyle(document.body).fontSize) - 6) + "px";
     main.appendChild(span);
 }
 //移动每一个弹幕
@@ -24,7 +24,7 @@ function move(){
     }
 }
 //利用定时器，使弹幕连续移动
-setInterval(move, 40);
+var timer = setInterval(move, 40);
 //回车发送弹幕
 document.getElementById("content").onkeypress = function(e) {
     if (e.keyCode === 13) {
@@ -32,3 +32,7 @@ document.getElementById("content").onkeypress = function(e) {
         this.value = "";
     }
 }
+//暂停 调试用
+document.getElementById("pause").addEventListener("click", function() {
+	clearInterval(timer);
+});
